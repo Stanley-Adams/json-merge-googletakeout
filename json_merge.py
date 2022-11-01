@@ -8,7 +8,6 @@
     Added additional metadata arguments
 """
 
-
 import os
 import argparse
 import shutil
@@ -19,7 +18,7 @@ args = parser.parse_args()
 
 file_counter = 0
 
-print("\nMerging .json & .jpg files...")
+print("\nMerging .json & .jpg files in " + args.folder)
 for subdir, dirs, files in os.walk(args.folder):
     for filename in files:
         filepath = subdir + os.sep + filename
